@@ -7,6 +7,7 @@ import DryingLogs from "./pages/DryingLogs";
 import Histories from "./pages/Histories";
 import Schedules from "./pages/Schedules";
 import ErrorBoundary from "./components/ErrorBoundary";
+import SplashScreen from "./components/SplashScreen";
 import "./index.css";
 
 const ErrorFallback: React.FC = () => (
@@ -52,10 +53,17 @@ const router = createBrowserRouter([
   },
 ]);
 
+const RootApp: React.FC = () => (
+  <>
+    <SplashScreen />
+    <RouterProvider router={router} />
+  </>
+);
+
 createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <ErrorBoundary fallback={<ErrorFallback />}>
-      <RouterProvider router={router} />
+      <RootApp />
     </ErrorBoundary>
   </React.StrictMode>
 );
