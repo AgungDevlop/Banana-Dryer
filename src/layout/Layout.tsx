@@ -1,10 +1,7 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaHome, FaClipboardList, FaHistory, FaCalendarAlt } from "react-icons/fa";
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const navigate = useNavigate();
-
-  const goHome = () => navigate("/");
 
   return (
     <div className="flex flex-col min-h-screen">
