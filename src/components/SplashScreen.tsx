@@ -18,7 +18,7 @@ const SplashScreen: React.FC = () => {
     <div className="fixed inset-0 bg-orange-500 flex items-center justify-center z-50">
       <div className="text-center animate-fade-in">
         <img
-          src="https://i.ibb.co.com/d0jb4q4Q/Picsart-25-02-16-02-43-02-394.jpg"
+          src="https://cdn-icons-png.flaticon.com/512/6482/6482627.png"
           alt="Splash Screen"
           className="w-64 h-64 object-cover rounded-full border-4 border-orange-300 mx-auto mb-4"
         />
