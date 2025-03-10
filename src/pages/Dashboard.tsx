@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { FaHistory, FaCalendarAlt, FaClipboardList } from "react-icons/fa";
 
 interface Device {
   id: number;
@@ -146,57 +145,6 @@ const Dashboard: React.FC = () => {
           )}
         </div>
 
-        {/* Navigation Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          <Link
-            to="/drying_logs"
-            className="group bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-orange-100 hover:bg-orange-50 transform hover:-translate-y-1"
-          >
-            <div className="flex items-center">
-              <div className="p-2 bg-orange-100 rounded-full group-hover:bg-orange-200 transition-colors duration-300">
-                <FaClipboardList className="text-orange-500 text-2xl" />
-              </div>
-              <div className="ml-3">
-                <span className="text-base font-semibold text-gray-800 group-hover:text-orange-600 transition-colors duration-300">
-                  Drying Logs
-                </span>
-                <p className="text-xs text-gray-600 mt-1">View drying process records</p>
-              </div>
-            </div>
-          </Link>
-          <Link
-            to="/histories"
-            className="group bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-orange-100 hover:bg-orange-50 transform hover:-translate-y-1"
-          >
-            <div className="flex items-center">
-              <div className="p-2 bg-orange-100 rounded-full group-hover:bg-orange-200 transition-colors duration-300">
-                <FaHistory className="text-orange-500 text-2xl" />
-              </div>
-              <div className="ml-3">
-                <span className="text-base font-semibold text-gray-800 group-hover:text-orange-600 transition-colors duration-300">
-                  Histories
-                </span>
-                <p className="text-xs text-gray-600 mt-1">Check historical data</p>
-              </div>
-            </div>
-          </Link>
-          <Link
-            to="/schedules"
-            className="group bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-orange-100 hover:bg-orange-50 transform hover:-translate-y-1"
-          >
-            <div className="flex items-center">
-              <div className="p-2 bg-orange-100 rounded-full group-hover:bg-orange-200 transition-colors duration-300">
-                <FaCalendarAlt className="text-orange-500 text-2xl" />
-              </div>
-              <div className="ml-3">
-                <span className="text-base font-semibold text-gray-800 group-hover:text-orange-600 transition-colors duration-300">
-                  Schedules
-                </span>
-                <p className="text-xs text-gray-600 mt-1">Manage drying schedules</p>
-              </div>
-            </div>
-          </Link>
-        </div>
       </div>
     </div>
   );
