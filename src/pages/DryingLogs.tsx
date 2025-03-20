@@ -6,7 +6,7 @@ interface DryingLog {
   device_id: number;
   start_time: string | null;
   end_time: string | null;
-  drying_mode: "fast" | "slow" | "normal";
+  drying_mode: "aktif" | "tidak aktif";
   final_weight: number;
   status: "in_progress" | "completed" | "failed";
   created_at: string;
@@ -91,7 +91,7 @@ const DryingLogs: React.FC = () => {
                   {log.status === "completed" ? <FaCheckCircle className="mr-1" /> : 
                    log.status === "in_progress" ? <FaSpinner className="mr-1 animate-spin" /> : 
                    <FaTimesCircle className="mr-1" />}
-                  {log.status.replace("_", " ")}
+                  {log.status.replace("_", " ").charAt(0).toUpperCase() + log.status.replace("_", " ").slice(1)}
                 </span>
               </div>
               <div className="space-y-4">
@@ -114,14 +114,12 @@ const DryingLogs: React.FC = () => {
                   <span className="font-medium text-orange-600">Mode:</span>{" "}
                   <span
                     className={`ml-2 px-3 py-1 rounded-full text-sm font-medium ${
-                      log.drying_mode === "fast"
-                        ? "bg-blue-100 text-blue-800"
-                        : log.drying_mode === "slow"
-                        ? "bg-purple-100 text-purple-800"
-                        : "bg-orange-100 text-orange-800"
+                      log.drying_mode === "aktif"
+                        ? "bg-green-100 text-green-800"
+                        : "bg-gray-100 text-gray-800"
                     }`}
                   >
-                    {log.drying_mode}
+                    {log.drying_mode === "aktif" ? "Aktif" : "Tidak Aktif"}
                   </span>
                 </p>
                 <p className="text-gray-700 flex items-center">

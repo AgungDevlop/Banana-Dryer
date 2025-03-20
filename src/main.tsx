@@ -6,6 +6,7 @@ import Dashboard from "./pages/Dashboard";
 import DryingLogs from "./pages/DryingLogs";
 import Histories from "./pages/Histories";
 import Schedules from "./pages/Schedules";
+import Documentation from "./pages/Documentation"; // Import halaman baru
 import ErrorBoundary from "./components/ErrorBoundary";
 import SplashScreen from "./components/SplashScreen";
 import "./index.css";
@@ -47,6 +48,11 @@ const router = createBrowserRouter([
       {
         path: "schedules",
         element: <Schedules />,
+        errorElement: <ErrorFallback />,
+      },
+      {
+        path: "documentation",
+        element: <Documentation />, // Route baru untuk dokumentasi
         errorElement: <ErrorFallback />,
       },
     ],

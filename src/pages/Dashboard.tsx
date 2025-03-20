@@ -61,7 +61,7 @@ const Dashboard: React.FC = () => {
       <div className="p-6">
         <h1 className="text-3xl font-bold text-orange-600 mb-6">Dashboard</h1>
 
-        {/* Device Summary - Versi yang Diperkecil */}
+        {/* Device Summary */}
         <div className="bg-white shadow-xl rounded-xl p-4 mb-6 border border-orange-100">
           <h2 className="text-xl font-semibold text-orange-600 mb-3 flex items-center">
             <span className="mr-2">Device Summary</span>
@@ -143,7 +143,6 @@ const Dashboard: React.FC = () => {
             </ul>
           )}
         </div>
-
       </div>
     </div>
   );

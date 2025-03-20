@@ -140,6 +140,11 @@ const Histories: React.FC = () => {
                     <span className="ml-2 text-sm">{history.feeder_level2}%</span>
                   </div>
                 </p>
+                <p className="text-gray-700 flex items-center text-sm">
+                  <FaHistory className="mr-2 text-orange-500" />
+                  <span className="font-medium text-orange-600">Recorded:</span>{" "}
+                  {new Date(history.created_at).toLocaleString()}
+                </p>
               </div>
             </div>
           ))}
